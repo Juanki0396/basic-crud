@@ -1,7 +1,6 @@
 package pio.daw;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class Cliente {
@@ -78,6 +77,30 @@ public class Cliente {
         mapa.put("matricula", this.matricula);
         return mapa;
     }
+
+    public String getNombre(){
+        return this.nombre;
+    }
+
+    public String getApellidos(){
+        return this.apellidos;
+    }
+
+    public String getDNI(){
+        return this.dni;
+    }
+    public String getMatricula(){
+        return this.matricula;
+    }
+
+    public Boolean compareTo(Cliente c){
+        return this.nombre.equals(c.getNombre()) &&
+               this.apellidos.equals(c.getApellidos()) &&
+               this.dni.equals(c.getDNI()) &&
+               this.matricula.equals(c.getMatricula());
+    }
+    
+    
 
     
 }
